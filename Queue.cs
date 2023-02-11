@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace StackAndQueue
+{
+    internal class Queue<T>
+    {
+        int capacity;
+        public T[] obj;
+        int front = -1, rear = -1;
+        public Queue(int capacity)
+        {
+            this.capacity = capacity;
+            obj = new T [capacity];
+        }
+        public bool Enqueue(T data)
+        {
+            if (rear == capacity - 1)  
+            {
+                Console.WriteLine("Que is full");
+                return false;
+            }
+            if (rear == -1)
+            {
+                front++;
+            }
+            obj[++rear] = data;
+            return true;
+        }
+        
+    }
+}
