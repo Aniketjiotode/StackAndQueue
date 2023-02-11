@@ -24,6 +24,24 @@ namespace StackAndQueue
             St[++top] = data;
             return true;
         }
-        
+        public T Pop()
+        {
+            if (top == -1)
+            {
+                Console.WriteLine("Stack Underflow");
+                return default (T);
+            }
+            return St[top--];
+        }
+        public T Peek()
+        {
+            if (top == -1)
+            {
+                Console.WriteLine("Stack is UnderFlow");
+                return (T) default;
+            }
+            return St[top];
+        }
+
     }
 }
