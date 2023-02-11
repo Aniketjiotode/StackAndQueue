@@ -10,7 +10,9 @@ namespace StackAndQueue
             que.Enqueue (56);
             que.Enqueue (30);
             que.Enqueue (76);
-        ;
+            Console.WriteLine(que.Dequeue());   
+            Console.WriteLine(que.Dequeue());   
+            Console.WriteLine(que.Dequeue());   
            for(int i=0; i<3; i++)
             {
                 Console.WriteLine(que.obj[i]);

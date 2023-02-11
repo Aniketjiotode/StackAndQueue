@@ -28,6 +28,17 @@ namespace StackAndQueue
             obj[++rear] = data;
             return true;
         }
-        
+        public T Dequeue()
+        {
+            if (front == -1)
+            {
+                Console.WriteLine("Que is empty");
+                return default(T);
+            }
+            T res = obj[front++];
+            if (front > rear) 
+                front = rear = -1;
+            return res;
+        }
     }
 }
